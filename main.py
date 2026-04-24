@@ -62,11 +62,12 @@ logging.basicConfig(
 logger = logging.getLogger("WebBot")
 
 # ─── CONFIGURATION ────────────────────────────────────────────────────────────
-BOT_TOKEN = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
-ADMIN_IDS: List[int] = [int(x) for x in os.getenv("ADMIN_IDS", "").split(",") if x.strip().isdigit()]
+BOT_TOKEN = "8674585395:AAH9el0DxulJyzSCvY7fXWuTVSFYw_BnMEA"
+ADMIN_IDS: List[int] = [8495422765, 8722615269]  # Single admin
+# Or for multiple admins: ADMIN_IDS: List[int] = [8495422765, 123456789]
 DB_PATH = os.getenv("DB_PATH", "webbot.db")
 TEMP_DIR = Path(os.getenv("TEMP_DIR", "temp_downloads"))
-TEMP_DIR.mkdir(exist_ok=True)
+TEMP_DIR.mkdir(exist_ok=True))
 
 MAX_FILE_SIZE_MB = 2000
 JOB_TIMEOUT_SECONDS = 7200
